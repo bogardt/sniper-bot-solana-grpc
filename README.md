@@ -1,4 +1,34 @@
 # Solana Sniper Bot (Rust) — Yellowstone gRPC + Helius Sender
+<p align="center">
+  <img src="SNIPER.png" height="130" alt="Solana Sniper Bot">
+</p>
+
+<div align="center">
+
+[![CI](https://img.shields.io/github/actions/workflow/status/bogardt/solana-sniper-bot/ci.yml?label=build)](https://github.com/bogardt/solana-sniper-bot/actions)
+![Rust async](https://img.shields.io/badge/Rust-async-93450B?logo=rust)
+![Solana 1.18](https://img.shields.io/badge/Solana-1.18-purple)
+![Made&nbsp;with&nbsp;❤](https://img.shields.io/badge/Made_with-❤-ff69b4)
+
+</div>
+
+> **Solana Sniper Bot** is a lightning‑fast copy‑trading / MEV engine that
+> mirrors Pump.fun launches and whale transfers in **under 150 ms**.  
+> Mempool via Yellowstone gRPC ➜ atomic Jito bundles ➜ dynamic TP / SL.
+
+---
+
+## 🗂 Documentation Quick‑Links
+
+| 📄 Doc | 👉 What you’ll find |
+|--------|--------------------|
+| **[Architecture Overview](docs/architecture.md)** | Async flow, directory tree, bundle pipeline |
+| **[Gulf Stream & Priority Primer](docs/gulf-stream.md)** | How Jito BE sorts bundles, tip strategy |**
+| **[Advanced Features](docs/advanced-features.md)** | Rate‑limit shield, multi‑wallet rotation, metrics** |
+| **[Jito Rust Toolkit](docs/jito-github-libs.md)** | Which crate for which task (`jito-rs`, `mev-protos`, …) |
+| **[Price / Risk Settings](docs/price-settings.md)** | Where to tweak TP / SL %, dev‑size mirroring |
+
+---
 
 A high-performance sniper bot for Solana that:
 - **Streams blockchain data in real-time** via **Yellowstone gRPC**, using Solana's Geyser plugin for ultra-low latency data. :contentReference[oaicite:1]{index=1}
