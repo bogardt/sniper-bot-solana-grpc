@@ -88,7 +88,7 @@ cargo build --release
 5. Run the bot:
 
 ```bash
-RUST_LOG=info cargo run --release
+cargo run "token_creator_wallet_address"
 ```
 
 You can override `RUST_LOG` in `.env` or command line.
