@@ -101,23 +101,23 @@ RUST\_LOG=info
 1. Clone the repository and add your `.env` file.  
 2. Install Rust and ensure `cargo` is in your PATH.  
 3. (Optional) Install and run MongoDB locally or via Docker:  
-   ```bash
+```bash
    # on macOS
    brew services start mongodb-community
 ````
 
 4. Build the bot:
 
-   ```bash
-   cargo build --release
-   ```
+```bash
+cargo build --release
+```
 5. Run the bot:
 
-   ```bash
-   RUST_LOG=info cargo run --release
-   ```
+```bash
+RUST_LOG=info cargo run --release
+```
 
-   You can override `RUST_LOG` in `.env` or command line.
+You can override `RUST_LOG` in `.env` or command line.
 
 ---
 
