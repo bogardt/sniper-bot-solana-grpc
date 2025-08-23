@@ -102,8 +102,8 @@ RUST\_LOG=info
 2. Install Rust and ensure `cargo` is in your PATH.  
 3. (Optional) Install and run MongoDB locally or via Docker:  
 ```bash
-   # on macOS
-   brew services start mongodb-community
+# on macOS
+brew services start mongodb-community
 ````
 
 4. Build the bot:
