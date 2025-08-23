@@ -1,7 +1,7 @@
-# Solana Sniper Bot (Rust) — Yellowstone gRPC + Helius Sender
 <p align="center">
   <img src="SNIPER.png" height="130" alt="Solana Sniper Bot">
 </p>
+# ✨ Solana Sniper Bot (Rust) — Yellowstone gRPC + Helius Sender
 
 <div align="center">
 
@@ -18,39 +18,26 @@
 
 ---
 
-## 🗂 Documentation Quick‑Links
-
-| 📄 Doc | 👉 What you’ll find |
-|--------|--------------------|
-| **[Architecture Overview](docs/architecture.md)** | Async flow, directory tree, bundle pipeline |
-| **[Gulf Stream & Priority Primer](docs/gulf-stream.md)** | How Jito BE sorts bundles, tip strategy |**
-| **[Advanced Features](docs/advanced-features.md)** | Rate‑limit shield, multi‑wallet rotation, metrics** |
-| **[Jito Rust Toolkit](docs/jito-github-libs.md)** | Which crate for which task (`jito-rs`, `mev-protos`, …) |
-| **[Price / Risk Settings](docs/price-settings.md)** | Where to tweak TP / SL %, dev‑size mirroring |
-
----
-
 A high-performance sniper bot for Solana that:
 - **Streams blockchain data in real-time** via **Yellowstone gRPC**, using Solana's Geyser plugin for ultra-low latency data. :contentReference[oaicite:1]{index=1}
 - **Submits transactions** using **Helius Sender**, which dual-routes to validators and Jito to maximize inclusion speed. :contentReference[oaicite:2]{index=2}
 - Persists metrics/signals to **MongoDB** for analytics and observability.
 
-## Table of Contents
+## 💬 Table of Contents
 
 1. [Architecture](#architecture)  
 2. [Prerequisites](#prerequisites)  
-3. [.env — Variables Explained](#env-variables-explained)  
-4. [Installation & Running Instructions](#installation--running-instructions)  
-5. [Streaming Data: Yellowstone gRPC](#streaming-data-yellowstone-grpc)  
-6. [Fast Transaction Submission: Helius Sender](#fast-transaction-submission-helius-sender)  
-7. [Observability & Database](#observability--database)  
-8. [Security & Best Practices](#security--best-practices)  
-9. [Troubleshooting](#troubleshooting)  
-10. [References](#references)
+3. [Installation & Running Instructions](#installation--running-instructions)  
+4. [Streaming Data: Yellowstone gRPC](#streaming-data-yellowstone-grpc)  
+5. [Fast Transaction Submission: Helius Sender](#fast-transaction-submission-helius-sender)  
+6. [Observability & Database](#observability--database)  
+7. [Security & Best Practices](#security--best-practices)  
+8. [Troubleshooting](#troubleshooting)  
+9. [References](#references)
 
 ---
 
-## Architecture
+## ❤ Architecture
 
 ```
 
@@ -83,50 +70,7 @@ Solana Network
 
 ---
 
-## .env — Variables Explained
-
-Your `.env` should contain:
-
-```
-
-API\_KEY=
-GEYSER\_URL=
-X\_TOKEN=
-
-PRIVATE\_KEY=
-PRIVATE\_KEY\_TRADE\_BIN=
-
-MONGODB\_URI=mongodb://localhost:27017
-DATABASE\_NAME=token\_analytics
-
-TIP\_AMOUNT=0.0011
-BUY\_AMOUNT\_SOL=300000000
-UNIT\_PRICE\_BUY=600000
-UNIT\_LIMIT\_BUY=100000
-UNIT\_PRICE\_SELL=10000
-UNIT\_LIMIT\_SELL=150000
-PROFIT\_PERCENTAGE=1.3
-LOST\_PERCENTAGE=0.7
-RUST\_LOG=info
-
-````
-
-### Variable Definitions
-
-- **`API_KEY`** – your Helius API key (used for both RPC & Sender). :contentReference[oaicite:5]{index=5}  
-- **`GEYSER_URL`** – gRPC endpoint URL for Yellowstone (e.g., `https://...:10000`). :contentReference[oaicite:6]{index=6}  
-- **`X_TOKEN`** – authentication token for access to the gRPC endpoint. :contentReference[oaicite:7]{index=7}  
-- **`PRIVATE_KEY` / `PRIVATE_KEY_TRADE_BIN`** – operator and trading wallet private keys (keep secure).  
-- **`MONGODB_URI` / `DATABASE_NAME`** – MongoDB connection and DB name.  
-- **`TIP_AMOUNT`** – SOL tip for prioritization (minimum ~0.001 SOL recommended for Helius Sender). :contentReference[oaicite:8]{index=8}  
-- **`BUY_AMOUNT_SOL`** – amount in lamports (e.g., 300_000_000 = 0.3 SOL).  
-- **`UNIT_PRICE_*` / `UNIT_LIMIT_*`** – Compute Unit pricing and limit for buy/sell actions.  
-- **`PROFIT_PERCENTAGE` / `LOST_PERCENTAGE`** – thresholds for take-profit / stop-loss.  
-- **`RUST_LOG`** – Rust logging level (e.g., `info`, `debug`, `trace`).
-
----
-
-## Installation & Running Instructions
+## 🏗 Installation & Running Instructions
 
 1. Clone the repository and add your `.env` file.  
 2. Install Rust and ensure `cargo` is in your PATH.  
@@ -151,7 +95,7 @@ You can override `RUST_LOG` in `.env` or command line.
 
 ---
 
-## Streaming Data: Yellowstone gRPC
+## 🚀 Streaming Data: Yellowstone gRPC
 
 * Provides ultra-low latency real-time streaming of Solana data: accounts, transactions, slots, blocks. ([Helius][1], [QuickNode][2], [QuickNode][3], [Chainstack][4], [Helius][5])
 * Supports advanced filtering by program ID, accounts, transaction types. ([Helius][5])
@@ -160,7 +104,7 @@ You can override `RUST_LOG` in `.env` or command line.
 
 ---
 
-## Fast Transaction Submission: Helius Sender
+## ⚡ Fast Transaction Submission: Helius Sender
 
 * **Helius Sender** optimizes latency by simultaneously sending your transaction to validators and Jito. ([Helius][1])
 * No API credits consumed; includes global HTTP endpoints. ([Helius][1])
@@ -169,7 +113,7 @@ You can override `RUST_LOG` in `.env` or command line.
 
 ---
 
-## Observability & Database
+## 📦 Observability & Database
 
 * Persist signals, actions, and errors to MongoDB for post-mortem and analytics.
 * Optional: add indexes (e.g., `created_at`, `mint`, `program_id`) and TTLs.
@@ -177,7 +121,7 @@ You can override `RUST_LOG` in `.env` or command line.
 
 ---
 
-## Security & Best Practices
+## 🛡 Security & Best Practices
 
 * **Never commit** your `.env` or private keys.
 * Use separate wallets for operations vs trading.
@@ -186,7 +130,7 @@ You can override `RUST_LOG` in `.env` or command line.
 
 ---
 
-## Troubleshooting
+## 🌊 Troubleshooting
 
 * **Streaming lag in JS clients**: Node.js may lag under high throughput; Rust or Go handle streaming data more reliably. ([Helius][1], [Helius][7], [Solana Stack Exchange][8])
 * **Choosing compute units**: Simulate to estimate limits, add \~10% headroom, and set price via Helius priority fee estimate API.
@@ -194,7 +138,7 @@ You can override `RUST_LOG` in `.env` or command line.
 
 ---
 
-## References
+## 📄 References
 
 * **Yellowstone gRPC Streaming**: ultra-low latency streaming with filtering. ([Helius][5])
 * **Account / Transaction / Slot Monitoring** using Yellowstone. ([Helius][9])
@@ -211,3 +155,17 @@ You can override `RUST_LOG` in `.env` or command line.
 [7]: https://www.helius.dev/docs/data-streaming?utm_source=chatgpt.com "Solana Data Streaming - Helius Docs"
 [8]: https://solana.stackexchange.com/questions/22909/solana-yellowstone-geyser-grpc-with-javascript?utm_source=chatgpt.com "solana yellowstone geyser grpc with javascript"
 [9]: https://www.helius.dev/docs/grpc/transaction-monitoring?utm_source=chatgpt.com "Transaction Monitoring with Yellowstone gRPC"
+
+
+## 💬 Community & Commercial Edition
+
+* Telegram → **@bogardt**
+* Twitter/X → [@toptrendev](https://x.com/toptrendev)
+* Discord → `TopTrenDev#146`
+
+**Want the full ultra‑low‑latency engine?**
+DM for single‑user licences (private repo + EULA).
+
+---
+
+**License**: MIT (demo edition). Commercial licence available for the full build.
