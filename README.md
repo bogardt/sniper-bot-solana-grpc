@@ -1,7 +1,8 @@
+## ✨ Solana Sniper Bot (Rust) — Yellowstone gRPC + Helius Sender
+
 <p align="center">
   <img src="SNIPER.png" height="130" alt="Solana Sniper Bot">
 </p>
-# ✨ Solana Sniper Bot (Rust) — Yellowstone gRPC + Helius Sender
 
 <div align="center">
 
