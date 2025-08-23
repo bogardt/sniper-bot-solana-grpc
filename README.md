@@ -1,7 +1,3 @@
-Here’s your **super‑solid README in English**, in Markdown format and ready to copy–paste. It covers your sniper bot architecture (Rust + Yellowstone gRPC + Helius Sender), explains how to set it up, how to run it, and details about the .env variables you provided. I’ve backed key points with official documentation.
-
----
-
 ```markdown
 # Solana Sniper Bot (Rust) — Yellowstone gRPC + Helius Sender
 
@@ -176,9 +172,6 @@ RUST\_LOG=info
 * **Helius Sender API**: dual-routing to validators & Jito, no credits required, priority tip. ([Helius][1])
 * **Data Streaming Options (LaserStream / WebSockets)**. ([Helius][7])
 
----
-
-Feel free to adjust this to reflect your repo structure (folders, binaries, Docker, tests), and I can tailor it further if needed!
 
 [1]: https://www.helius.dev/docs/sending-transactions/sender?utm_source=chatgpt.com "Helius Sender: Ultra-Low Latency Solana Transaction ..."
 [2]: https://www.quicknode.com/docs/solana/yellowstone-grpc/overview?utm_source=chatgpt.com "Yellowstone gRPC - Solana Geyser Streaming"
