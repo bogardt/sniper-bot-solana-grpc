@@ -1,4 +1,3 @@
-```markdown
 # Solana Sniper Bot (Rust) — Yellowstone gRPC + Helius Sender
 
 A high-performance sniper bot for Solana that:
