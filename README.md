@@ -156,12 +156,15 @@ You can override `RUST_LOG` in `.env` or command line.
 [8]: https://solana.stackexchange.com/questions/22909/solana-yellowstone-geyser-grpc-with-javascript?utm_source=chatgpt.com "solana yellowstone geyser grpc with javascript"
 [9]: https://www.helius.dev/docs/grpc/transaction-monitoring?utm_source=chatgpt.com "Transaction Monitoring with Yellowstone gRPC"
 
+---
 
 ## 💬 Community & Commercial Edition
 
 * Telegram → **@bogardt**
 * Twitter/X → [@toptrendev](https://x.com/toptrendev)
 * Discord → `TopTrenDev#146`
+
+---
 
 **Want the full ultra‑low‑latency engine?**
 DM for single‑user licences (private repo + EULA).
