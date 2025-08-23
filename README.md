@@ -161,8 +161,7 @@ You can override `RUST_LOG` in `.env` or command line.
 ## 💬 Community & Commercial Edition
 
 * Telegram → **@bogardt**
-* Twitter/X → [@toptrendev](https://x.com/toptrendev)
-* Discord → `TopTrenDev#146`
+* Discord → `kama_92`
 
 ---
 
