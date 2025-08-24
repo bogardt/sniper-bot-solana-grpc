@@ -71,7 +71,7 @@ Solana Network
 
 ---
 
-🏗 ## Installation & Running Instructions
+## 🏗 Installation & Running Instructions
 
 1. Clone the repository and add your `.env` file.  
 2. Install Rust and ensure `cargo` is in your PATH.  
@@ -96,7 +96,7 @@ You can override `RUST_LOG` in `.env` or command line.
 
 ---
 
-🚀 ## Streaming Data: Yellowstone gRPC
+## 🚀 Streaming Data: Yellowstone gRPC
 
 * Provides ultra-low latency real-time streaming of Solana data: accounts, transactions, slots, blocks. ([Helius][1], [QuickNode][2], [QuickNode][3], [Chainstack][4], [Helius][5])
 * Supports advanced filtering by program ID, accounts, transaction types. ([Helius][5])
@@ -105,7 +105,7 @@ You can override `RUST_LOG` in `.env` or command line.
 
 ---
 
-⚡ ## Fast Transaction Submission: Helius Sender
+## ⚡ Fast Transaction Submission: Helius Sender
 
 * **Helius Sender** optimizes latency by simultaneously sending your transaction to validators and Jito. ([Helius][1])
 * No API credits consumed; includes global HTTP endpoints. ([Helius][1])
@@ -114,7 +114,7 @@ You can override `RUST_LOG` in `.env` or command line.
 
 ---
 
-📦 ## Observability & Database
+## 📦 Observability & Database
 
 * Persist signals, actions, and errors to MongoDB for post-mortem and analytics.
 * Optional: add indexes (e.g., `created_at`, `mint`, `program_id`) and TTLs.
@@ -122,7 +122,7 @@ You can override `RUST_LOG` in `.env` or command line.
 
 ---
 
-🛡 ## Security & Best Practices
+## 🛡 Security & Best Practices
 
 * **Never commit** your `.env` or private keys.
 * Use separate wallets for operations vs trading.
@@ -131,7 +131,7 @@ You can override `RUST_LOG` in `.env` or command line.
 
 ---
 
-🌊 ## Troubleshooting
+## 🌊 Troubleshooting
 
 * **Streaming lag in JS clients**: Node.js may lag under high throughput; Rust or Go handle streaming data more reliably. ([Helius][1], [Helius][7], [Solana Stack Exchange][8])
 * **Choosing compute units**: Simulate to estimate limits, add \~10% headroom, and set price via Helius priority fee estimate API.
@@ -139,7 +139,7 @@ You can override `RUST_LOG` in `.env` or command line.
 
 ---
 
-📄 ## References
+## 📄 References
 
 * **Yellowstone gRPC Streaming**: ultra-low latency streaming with filtering. ([Helius][5])
 * **Account / Transaction / Slot Monitoring** using Yellowstone. ([Helius][9])
