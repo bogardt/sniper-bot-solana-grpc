@@ -1,5 +1,3 @@
-## ✨ Solana Sniper Bot (Rust) — Yellowstone gRPC + Helius Sender
-
 <p align="center">
   <img src="SNIPER.png" height="130" alt="Solana Sniper Bot">
 </p>
@@ -12,6 +10,8 @@
 ![Made&nbsp;with&nbsp;❤](https://img.shields.io/badge/Made_with-❤-ff69b4)
 
 </div>
+
+## ✨ Solana Sniper Bot (Rust) — Yellowstone gRPC + Helius Sender
 
 > **Solana Sniper Bot** is a lightning‑fast copy‑trading / MEV engine that
 > mirrors Pump.fun launches and whale transfers in **under 150 ms**.  
